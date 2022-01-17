@@ -3,7 +3,12 @@ package com.xiaoju.basetech.util;
 //import org.apache.commons.io.IOUtils;
 
 
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -147,7 +152,7 @@ public class ReportHelper {
                     "            <plugin>\n" +
                     "                <groupId>org.jacoco</groupId>\n" +
                     "                <artifactId>jacoco-maven-plugin</artifactId>\n" +
-                    "                <version>1.0.1-SNAPSHOT</version>\n" +
+                    "                <version>0.8.7</version>\n" +
                     "                <executions>\n" +
                     "                    <execution>\n" +
                     "                        <id>report-aggregate</id>\n" +

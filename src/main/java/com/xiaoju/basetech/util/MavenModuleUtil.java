@@ -6,12 +6,6 @@ package com.xiaoju.basetech.util;
  * @time: 2019/8/27 4:17 PM
  */
 
-import java.io.*;
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
 import com.xiaoju.basetech.entity.CoverageReportEntity;
 import com.xiaoju.basetech.entity.ModuleInfo;
 import lombok.extern.slf4j.Slf4j;
@@ -20,6 +14,17 @@ import org.dom4j.Element;
 import org.dom4j.io.SAXReader;
 import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 @Component
 @Slf4j
@@ -88,7 +93,7 @@ public class MavenModuleUtil {
                     "            <plugin>\n" +
                     "                <groupId>org.jacoco</groupId>\n" +
                     "                <artifactId>jacoco-maven-plugin</artifactId>\n" +
-                    "                <version>1.0.2-SNAPSHOT</version>\n" +
+                    "                <version>0.8.7</version>\n" +
                     "                <executions>\n" +
                     "                    <execution>\n" +
                     "                        <id>report-aggregate</id>\n" +
